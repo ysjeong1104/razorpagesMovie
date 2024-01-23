@@ -2,3 +2,4 @@ bin/
 Migrations/
 obj/
 RazorPagesMovieContext-9086ebab-87c9-4a74-93de-fec26b742087.db
+appsettings.json
