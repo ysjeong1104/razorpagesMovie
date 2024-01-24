@@ -8,13 +8,13 @@ using Microsoft.EntityFrameworkCore;
 using RazorPagesMovie.Data;
 using RazorPagesMovie.Models;
 
-namespace RazorPagesMovie.Pages.Actors
+namespace RazorPagesMovie.Pages_Actors
 {
     public class IndexModel : PageModel
     {
-        private readonly RazorPagesMovie.Data.RazorPagesActorContext _context;
+        private readonly RazorPagesMovie.Data.RazorPagesMovieContext _context;
 
-        public IndexModel(RazorPagesMovie.Data.RazorPagesActorContext context)
+        public IndexModel(RazorPagesMovie.Data.RazorPagesMovieContext context)
         {
             _context = context;
         }

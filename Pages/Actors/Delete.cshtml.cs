@@ -8,13 +8,13 @@ using Microsoft.EntityFrameworkCore;
 using RazorPagesMovie.Data;
 using RazorPagesMovie.Models;
 
-namespace RazorPagesMovie.Pages.Actors
+namespace RazorPagesMovie.Pages_Actors
 {
     public class DeleteModel : PageModel
     {
-        private readonly RazorPagesMovie.Data.RazorPagesActorContext _context;
+        private readonly RazorPagesMovie.Data.RazorPagesMovieContext _context;
 
-        public DeleteModel(RazorPagesMovie.Data.RazorPagesActorContext context)
+        public DeleteModel(RazorPagesMovie.Data.RazorPagesMovieContext context)
         {
             _context = context;
         }

@@ -5,8 +5,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddDbContext<RazorPagesActorContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("RazorPagesActorContext") ?? throw new InvalidOperationException("Connection string 'RazorPagesActorContext' not found.")));
+//builder.Services.AddDbContext<RazorPagesActorContext>(options =>
+ //   options.UseNpgsql(builder.Configuration.GetConnectionString("RazorPagesActorContext") ?? throw new InvalidOperationException("Connection string 'RazorPagesActorContext' not found.")));
 builder.Services.AddDbContext<RazorPagesMovieContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("RazorPagesMovieContext") ?? throw new InvalidOperationException("Connection string 'RazorPagesMovieContext' not found.")));
 

@@ -9,13 +9,13 @@ using Microsoft.EntityFrameworkCore;
 using RazorPagesMovie.Data;
 using RazorPagesMovie.Models;
 
-namespace RazorPagesMovie.Pages.Actors
+namespace RazorPagesMovie.Pages_Actors
 {
     public class EditModel : PageModel
     {
-        private readonly RazorPagesMovie.Data.RazorPagesActorContext _context;
+        private readonly RazorPagesMovie.Data.RazorPagesMovieContext _context;
 
-        public EditModel(RazorPagesMovie.Data.RazorPagesActorContext context)
+        public EditModel(RazorPagesMovie.Data.RazorPagesMovieContext context)
         {
             _context = context;
         }
