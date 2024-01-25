@@ -12,5 +12,9 @@ namespace RazorPagesMovie.Models
         public required string FullName { get; set; }
         [DataType(DataType.Date)]
         public DateTime Birth { get; set; }
+
+        public int MovieId {get;set;}
+        public Movie? ActorMovie { get; set; }
+
     }
 }

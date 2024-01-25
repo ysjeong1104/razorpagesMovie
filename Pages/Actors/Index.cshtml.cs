@@ -23,7 +23,8 @@ namespace RazorPagesMovie.Pages_Actors
 
         public async Task OnGetAsync()
         {
-            Actor = await _context.Actor.ToListAsync();
+            Actor = await _context.Actor
+                .Include(a => a.ActorMovie).ToListAsync();
         }
     }
 }

@@ -21,6 +21,7 @@ namespace RazorPagesMovie.Pages_Actors
 
         public IActionResult OnGet()
         {
+        ViewData["MovieId"] = new SelectList(_context.Movie, "Id", "Id");
             return Page();
         }
 

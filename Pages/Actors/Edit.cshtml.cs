@@ -36,6 +36,7 @@ namespace RazorPagesMovie.Pages_Actors
                 return NotFound();
             }
             Actor = actor;
+           ViewData["MovieId"] = new SelectList(_context.Movie, "Id", "Id");
             return Page();
         }
 

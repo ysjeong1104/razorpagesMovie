@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+using RazorPagesMovie.Models;
 
 namespace RazorPagesMovie.Models
 {
@@ -14,5 +11,8 @@ namespace RazorPagesMovie.Models
         public DateTime ReleaseDate { get; set; }
         public string? Genre { get; set; }
         public decimal Price { get; set; }
+
+        [MaxLength(3)]
+        public List<Actor>? Actors {get;set;} 
     }
 }
