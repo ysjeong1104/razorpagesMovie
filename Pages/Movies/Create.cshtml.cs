@@ -27,20 +27,19 @@ namespace RazorPagesMovie.Pages_Movies
 
         [BindProperty]
         public Movie Movie { get; set; } = default!;
-
-        public List<Actor> Actors {get;set;}
+        [BindProperty]
+        public List<Actor>? MovieActors {get;set;} = default!;
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
-        {   
-
+        {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
-            List<Actor>? tempList = [new Actor{FullName = "김", Birth= DateTime.UtcNow}, new Actor{FullName = "이", Birth= DateTime.UtcNow}];
-            Movie.Actors = tempList;
+           // List<Actor>? tempList = [new Actor{FullName = "김", Birth= DateTime.UtcNow}, new Actor{FullName = "이", Birth= DateTime.UtcNow}];
+            Movie.Actors = MovieActors;
             _context.Movie.Add(Movie);
             await _context.SaveChangesAsync();
 
